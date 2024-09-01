@@ -1,5 +1,7 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png"
+import "../../styles/header.scss"
 
 function Header() {
   return (
@@ -7,7 +9,7 @@ function Header() {
       <img src={logo} alt="logo Kasa"></img>
       <nav>
         <Link to="/">Accueil</Link>
-        <Link to="/apropos">A propos</Link>
+        <Link to="/about">A propos</Link>
       </nav>
     </header>
   );

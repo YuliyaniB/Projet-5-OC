@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    
+    img {
+        width: 145px;
+        height: 50px;
+    }
+
+    nav {
+        display: flex;
+        gap: 10px;
+
+        a {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+    }
+}
