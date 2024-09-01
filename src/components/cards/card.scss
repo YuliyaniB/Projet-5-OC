@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    padding: 0 15px;
+    // background-color: #F6F6F6;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        filter: brightness(70%);
+
+    }
+
+    .shadow {
+        
+    }
+
+    p {
+        color: #ffffff;
+        font-weight: 500;
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+    }
+}
