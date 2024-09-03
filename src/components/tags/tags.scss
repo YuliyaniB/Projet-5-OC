@@ -1,15 +1,19 @@
 .tag-container {
-    background-color: #FF6060;
-    border-radius: 20px;
-    width: 100px;
     
 
-    .tag-txt {
-        color: #ffffff;
-        font-weight: 700;
-        text-align: center;
-        
-        
-        
+  .tag-txt {
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+
+    li {
+        border-radius: 10px;
+        background-color: #FF6060;
+        padding: 5px 10px;
     }
+    
+  }
 }

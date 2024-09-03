@@ -16,7 +16,11 @@ export default function Collapse({ title, content }) {
     <div className="collapse">
       <div className="collapse-title" onClick={toggle}>
         <h2>{title}</h2>
-        <img src={arrowDown} alt="arrow" />
+        <img
+          className={!open ? "arrow" : "arrow arrow--opened"}
+          src={arrowDown}
+          alt="arrow"
+        />
       </div>
       {open && <div className="collapse-content">{content}</div>}
     </div>

@@ -4,7 +4,11 @@ import "./tags.scss";
 function Tags({content}) {
   return (
     <div className="tag-container">
-      <p className="tag-txt">{content}</p>
+      <ul className="tag-txt">
+        {content.map((content, id) => (
+          <li key={id}>{content}</li>
+        ))}
+      </ul>
     </div>
   );
 }

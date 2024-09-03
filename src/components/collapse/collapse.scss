@@ -1,7 +1,8 @@
 .collapse {
-    width: 100%;
+    width: 80%;
     background-color:#f6f6f6;
     border-radius: 5px;
+    justify-content: center;
 
     .collapse-title {
         display: flex;
@@ -10,7 +11,8 @@
         padding: 5px 10px;
         border-radius: 5px;
         background-color: #FF6060;
-        cursor: pointer;       
+        cursor: pointer;
+               
 
         h2{
             color: #ffffff;
@@ -18,15 +20,21 @@
             font-size: 15px;
         }
 
-        img {
+        .arrow {
             width: 25px;
             height: 25px;
+            transition: transform 200ms ease-in-out;
+
+            &--opened {
+                transform:rotate(180deg);      
+                transition: transform 200ms ease-in-out;      
+                }
         }
     }
 
     .collapse-content {
-        
-        
+        overflow: hidden;
+        transition: max-height 0.6s ease;
         padding: 15px;
        
     }

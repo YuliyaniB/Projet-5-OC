@@ -16,7 +16,10 @@ function Accomodation() {
   return (
     <div className="accomodation-page">
       <div className="tags">
-        <Tags content={accomodation.tags} />
+        
+          <Tags content={accomodation.tags} />
+        
+        
         
       </div>
 
