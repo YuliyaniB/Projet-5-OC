@@ -1,8 +1,33 @@
 .collapse {
-    background-color: #FF6060;
+    width: 100%;
+    background-color:#f6f6f6;
+    border-radius: 5px;
 
     .collapse-title {
         display: flex;
-        
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #FF6060;
+        cursor: pointer;       
+
+        h2{
+            color: #ffffff;
+            margin: 0;
+            font-size: 15px;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+
+    .collapse-content {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+       
     }
 }
