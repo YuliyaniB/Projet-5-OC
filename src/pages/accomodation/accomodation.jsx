@@ -4,6 +4,7 @@ import "./accomodation.scss";
 import ads from "../../ads.json";
 import Tags from "../../components/tags/tags";
 import Host from "../../components/host/host"
+import Rating from "../../components/rating/rating";
 import Collapse from "../../components/collapse/collapse";
 
 function Accomodation() {
@@ -22,6 +23,9 @@ function Accomodation() {
       </div>
       <div className="host-container">
         < Host name={accomodation.host.name} picture={accomodation.host.picture}/>
+      </div>
+      <div className="host-rate">
+        < Rating stars={accomodation.rating}/>
       </div>
 
       <div className="accomodation-collapse">
