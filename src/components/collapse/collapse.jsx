@@ -3,15 +3,11 @@ import "./collapse.scss";
 import arrowDown from "../../assets/arrow-down.png";
 
 export default function Collapse({ title, content }) {
-  //state (état, données)
   const [open, setOpen] = useState(false);
   const toggle = () => {
     setOpen(!open);
   };
 
-  // comportements
-
-  // affichage ( render )
   return (
     <div className="collapse">
       <div className="collapse-title" onClick={toggle}>

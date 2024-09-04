@@ -1,6 +1,8 @@
+import React, {useEffect, useState} from "react";
+import "./home.scss";
+import ads from "../../ads.json";
 import Banner from "../../components/banner/banner";
 import BannerHome from "../../assets/banner-home-optimal.webp";
-import ads from "../../ads.json";
 import { NavLink } from "react-router-dom";
 import Card from "../../components/cards/card";
 import ky from "ky";
@@ -8,8 +10,6 @@ import ky from "ky";
 // faire un fetch avec Ky pour préparer la future API
 
  function Home() {
-  
-  
 
   return (
     <main className="home-page">
