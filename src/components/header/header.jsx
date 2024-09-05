@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png"
-import "./header.scss"
+import logo from "../../assets/logo.png";
+import "./header.scss";
 
 function Header() {
   return (
     <header className="header">
-      <img src={logo} alt="logo Kasa"></img>
+      <Link to="/">
+        <img src={logo} alt="logo Kasa"></img>
+      </Link>
       <nav>
         <Link to="/">Accueil</Link>
         <Link to="/about">A propos</Link>
@@ -15,4 +17,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;

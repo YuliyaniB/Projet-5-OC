@@ -2,15 +2,17 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import "./accomodation.scss";
 import ads from "../../ads.json";
-import {Carrousel}  from "../../components/carrousel/carrousel";
+import Carrousel  from "../../components/carrousel/carrousel";
 import Tags from "../../components/tags/tags";
 import Host from "../../components/host/host";
 import Rating from "../../components/rating/rating";
 import Collapse from "../../components/collapse/collapse";
-import ky from "ky";
+//import ky from "ky";
 
 
 function Accomodation() {
+
+  
 
   const { accomodationId } = useParams();
   const accomodation = ads.find((i) => i.id === accomodationId);
@@ -18,9 +20,7 @@ function Accomodation() {
 
   return (
     <main className="accomodation-page">
-      <section className="carroussel">
-        <Carrousel slides={accomodation.pictures}/>
-      </section>
+      <Carrousel images={accomodation.pictures}/>
       <section className="main-section">
         <div className="accomodation-info">
           <div className="accomodation-title">

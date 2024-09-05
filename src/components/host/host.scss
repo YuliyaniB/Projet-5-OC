@@ -1,13 +1,20 @@
 .host-container {
-    
+    display: flex;
+    gap: 15px;
+    align-items: center;
 
     .host-name{
         font-weight: 500;
         color: #FF6060;
+        width: 80px;
+        text-align: end;
 
     }
 
     .host-picture{
         border-radius: 500px;
+        width: 75px;
+        height: 75px;
+        
     }
 }

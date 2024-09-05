@@ -1,0 +1,12 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+}
