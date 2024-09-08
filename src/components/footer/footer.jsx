@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/logo-footer.png";
 import "./footer.scss"
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className="footer">
       <img src={logo} alt="logo Kasa"></img>
@@ -11,4 +11,3 @@ function Footer() {
   );
 }
 
-export default Footer;

@@ -1,15 +1,20 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./home.scss";
-import ads from "../../ads.json";
 import Banner from "../../components/banner/banner";
 import BannerHome from "../../assets/banner-home-optimal.webp";
 import { NavLink } from "react-router-dom";
 import Card from "../../components/cards/card";
-import ky from "ky";
 
-// faire un fetch avec Ky pour préparer la future API
+export default function Home() {
+  const [ads, setAds] = useState([]); // État pour stocker les données
 
- function Home() {
+  // Utilisation de useEffect pour faire un fetch
+  useEffect(() => {
+    fetch("/ads.json") // Mettre le bon chemin vers ton fichier JSON
+      .then((response) => response.json()) // Conversion en JSON
+      .then((data) => setAds(data)) // Mise à jour de l'état avec les données récupérées
+      .catch((error) => console.error("Erreur lors du fetch:", error));
+  }, []); // Le tableau vide [] signifie que cet effet ne s'exécutera qu'une seule fois au montage du composant
 
   return (
     <main className="home-page">
@@ -29,5 +34,3 @@ import ky from "ky";
     </main>
   );
 }
-
-export default Home;

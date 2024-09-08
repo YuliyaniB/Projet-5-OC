@@ -4,6 +4,7 @@ import activeStar from "../../assets/star-active.png";
 import inactiveStar from "../../assets/star-inactive.png";
 
 export default function Rating({stars}) {
+  // faire avec usestate
   const array = [1, 2, 3, 4, 5];
 
   return (

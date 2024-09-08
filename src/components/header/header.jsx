@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "./header.scss";
 
-function Header() {
+export default function Header() {
   return (
     <header className="header">
       <Link to="/">
@@ -17,4 +17,4 @@ function Header() {
   );
 }
 
-export default Header;
+
