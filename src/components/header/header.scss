@@ -35,6 +35,9 @@
     @media screen and (min-width: $breakpoint-desktop) {
       gap: 50px;
     }
+    &-active {
+      text-decoration: underline;
+    }
 
     a {
       text-decoration: none;
@@ -45,6 +48,13 @@
       @media screen and (min-width: $breakpoint-tablet) {
         text-transform: none;
         font-size: 20px;
+      }
+      
+      &:hover {
+        text-decoration: underline;
+      }
+      &:focus {
+        text-decoration: underline;
       }
     }
   }

@@ -2,7 +2,7 @@ import React from "react";
 import "./about.scss";
 import aboutList from "../../data/about.json"
 import Banner from "../../components/banner/banner";
-import BannerAbout from "../../assets/banner-about.png";
+import BannerAbout from "../../assets/banner-about-optimal.webp";
 import Collapse from "../../components/collapse/collapse";
 
 export default function About() {
