@@ -3,9 +3,11 @@ import "./collapse.scss";
 import arrowDown from "../../assets/arrow-down.png";
 
 export default function Collapse({ title, content }) {
+  // Gérer l'état d'ouverture/fermeture du collapse
   const [open, setOpen] = useState(false);
+  // Fonction pour inverser l'état d'ouverture/fermeture
   const toggle = () => {
-    setOpen(!open);
+    setOpen(!open); // Si ouvert, on ferme, si fermé, on ouvre
   };
 
   return (

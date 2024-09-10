@@ -1,27 +1,51 @@
+@import "../../styles/variables.scss";
+
 .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    padding: 15px;
-    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 20px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 30px;
+  }
+
+  .header-logo {
+    width: 30%;
+    height: auto;
+    @media screen and (min-width: $breakpoint-tablet) {
+      width: 20%;
+    }
+    @media screen and (min-width: $breakpoint-desktop) {
+      width: 15%;
+    }
+
     img {
-        width: 100px;
-        height: auto;
+      width: 100%;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 15px;
+    font-weight: 500;
+    @media screen and (min-width: $breakpoint-tablet) {
+      gap: 30px;
+    }
+    @media screen and (min-width: $breakpoint-desktop) {
+      gap: 50px;
     }
 
-    nav {
-        display: flex;
-        gap: 10px;
-        font-weight: 500;
-
-        a {
-            text-decoration: none;
-            color: black;
-            cursor: pointer;
-            font-size: 10px;
-            text-transform: uppercase;
-        }
+    a {
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+      font-size: 12px;
+      text-transform: uppercase;
+      @media screen and (min-width: $breakpoint-tablet) {
+        text-transform: none;
+        font-size: 20px;
+      }
     }
+  }
 }

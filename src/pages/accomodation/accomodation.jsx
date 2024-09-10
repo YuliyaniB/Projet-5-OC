@@ -14,7 +14,7 @@ export default function Accomodation() {
 
   // Utilisation de useEffect pour récupérer les données via fetch afin de préparer les futurs appels API
   useEffect(() => {
-    fetch("/ads.json")
+    fetch("/accomodation.json")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Erreur réseau : " + response.statusText);
@@ -22,7 +22,7 @@ export default function Accomodation() {
         return response.json();
       })
       .then((data) => {
-        const foundAccomodation = data.find((i) => i.id === accomodationId); // Trouver l'hébergement correspondant
+        const foundAccomodation = data.find((i) => i.id === accomodationId); // Trouve l'hébergement correspondant
         setAccomodation(foundAccomodation); // Mise à jour de l'état avec les données trouvées
       })
       .catch((error) => {

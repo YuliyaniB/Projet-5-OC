@@ -1,42 +1,45 @@
-
+@import "../../styles/variables.scss";
 
 .collapse {
-    width: 100%;
-    background-color:#f6f6f6;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  justify-content: center;
+
+  .collapse-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
     border-radius: 5px;
-    justify-content: center;
-
-    .collapse-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px 10px;
-        border-radius: 5px;
-        background-color: #FF6060;
-        cursor: pointer;
-               
-
-        h2{
-            color: #ffffff;
-            margin: 0;
-            font-size: 15px;
-        }
-
-        .arrow {
-            width: 25px;
-            height: 25px;
-            transition: transform 200ms ease-in-out;
-
-            &--opened {
-                transform:rotate(180deg);      
-                transition: transform 200ms ease-in-out;      
-                }
-        }
+    background-color: $primary;
+    cursor: pointer;
+    @media screen and (min-width: $breakpoint-desktop) {
+      padding: 7px 10px;
     }
 
-    .collapse-content {
-        
-        padding: 15px;
-       
+    h2 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 15px;
+      @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 20px;
+      }
     }
+
+    .arrow {
+      width: 25px;
+      height: 25px;
+      transition: transform 200ms ease-in-out;
+
+      &--opened {
+        transform: rotate(180deg);
+        transition: transform 200ms ease-in-out;
+      }
+    }
+  }
+
+  .collapse-content {
+    padding: 15px;
+  }
 }
