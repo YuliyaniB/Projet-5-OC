@@ -31,12 +31,15 @@
     left: 0;
     font-family: "Montserrat";
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     @media screen and (min-width: $breakpoint-tablet) {
       width: 100%;
       justify-content: center;
       padding-left: 0;
-      font-size: 20px;
+      font-size: 25px;
+    }
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 30px;
     }
   }
 }
