@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+img {
+  width: 25px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    width: 30px;
+  }
+  @media screen and (min-width: $breakpoint-desktop) {
+    width: 35px;
+  }
+}

@@ -21,7 +21,10 @@ export default function Home() {
       <Banner image={BannerHome} texte="Chez vous, partout et ailleurs." />
       <section className="gallery">
         {datas.map((accomodation) => (
-          <NavLink key={accomodation.id} to={"/accomodation/" + accomodation.id + "/#"}>
+          <NavLink
+            key={accomodation.id}
+            to={"/accomodation/" + accomodation.id + "/#"}
+          >
             <Card
               key={accomodation.id}
               id={accomodation.id}

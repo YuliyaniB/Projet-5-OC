@@ -1,20 +1,38 @@
+@import "../../styles/variables.scss";
+
 .host-container {
-    display: flex;
-    gap: 15px;
-    align-items: center;
+  display: flex;
+  gap: 15px;
+  align-items: center;
 
-    .host-name{
-        font-weight: 500;
-        color: #FF6060;
-        width: 80px;
-        text-align: end;
-
+  .host-name {
+    font-weight: 500;
+    font-size: 15px;
+    color: $primary;
+    text-align: right;
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 20px;
     }
 
-    .host-picture{
-        border-radius: 500px;
-        width: 75px;
-        height: 75px;
-        
+    .host-first-name {
+      margin: 0;
     }
+    .host-last-name {
+      margin: 0;
+    }
+  }
+
+  .host-picture {
+    border-radius: 500px;
+    width: 50px;
+    height: 50px;
+    @media screen and (min-width: $breakpoint-tablet) {
+      width: 60px;
+      height: 60px;
+    }
+    @media screen and (min-width: $breakpoint-desktop) {
+      width: 70px;
+      height: 70px;
+    }
+  }
 }

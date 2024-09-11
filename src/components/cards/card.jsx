@@ -9,5 +9,3 @@ export default function Card({ id, image, titre }) {
     </article>
   );
 }
-
-

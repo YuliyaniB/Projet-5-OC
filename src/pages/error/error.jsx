@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./error.scss"
+import "./error.scss";
 
 export default function Error() {
   return (
@@ -10,5 +10,3 @@ export default function Error() {
     </main>
   );
 }
-
-

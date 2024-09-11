@@ -1,5 +1,7 @@
+@import "../../styles/variables.scss";
+
 .tag-container {
-    
+
 
   .tag-txt {
     color: #ffffff;
@@ -7,14 +9,28 @@
     text-align: center;
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 5px;
     padding: 0;
-
-    li {
-        border-radius: 10px;
-        background-color: #FF6060;
-        padding: 5px 10px;
+    margin: 0;
+    @media screen and (min-width: $breakpoint-tablet) {
+      gap: 10px;
     }
     
+
+    li {
+      border-radius: 10px;
+      background-color: $primary;
+      padding: 5px;
+      font-size: 10px;
+      min-width: 50px;
+      @media screen and (min-width: $breakpoint-tablet) {
+        font-size: 12px;
+        min-width: 100px;
+      }
+      @media screen and (min-width: $breakpoint-desktop) {
+        font-size: 14px;
+        min-width: 120px;
+      }
+    }
   }
 }

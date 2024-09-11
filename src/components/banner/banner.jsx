@@ -1,5 +1,5 @@
 import React from "react";
-import "./banner.scss"
+import "./banner.scss";
 
 export default function Banner({ image, texte }) {
   return (
@@ -11,4 +11,3 @@ export default function Banner({ image, texte }) {
     </section>
   );
 }
-

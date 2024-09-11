@@ -39,6 +39,8 @@ export default function Accomodation() {
     return <div>Chargement...</div>; // Affiche un message de chargement tant que les données ne sont pas prêtes
   }
 
+  const [firstName, lastName] = accomodation.host.name.split(' '); // Diviser le nom complet en prénom et nom
+
   return (
     <main className="accomodation-page">
       <Carrousel images={accomodation.pictures} />
@@ -48,20 +50,15 @@ export default function Accomodation() {
             <h1>{accomodation.title}</h1>
             <h3>{accomodation.location}</h3>
           </div>
-          <div className="tags">
-            <Tags content={accomodation.tags} />
-          </div>
+          <Tags content={accomodation.tags} />
         </div>
         <div className="host-info">
-          <div className="host-rate">
-            <Rating stars={accomodation.rating} />
-          </div>
-          <div className="host-profile">
-            <Host
-              name={accomodation.host.name}
-              picture={accomodation.host.picture}
-            />
-          </div>
+          <Rating stars={accomodation.rating} />
+          <Host
+            firstName={firstName}
+            lastName={lastName}
+            picture={accomodation.host.picture}
+          />
         </div>
       </section>
       <section className="accomodation-collapse">

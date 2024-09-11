@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo-footer.png";
-import "./footer.scss"
+import "./footer.scss";
 
 export default function Footer() {
   return (
@@ -10,4 +10,3 @@ export default function Footer() {
     </footer>
   );
 }
-

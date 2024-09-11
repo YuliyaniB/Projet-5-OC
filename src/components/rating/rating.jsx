@@ -4,10 +4,10 @@ import activeStar from "../../assets/star-active.png";
 import inactiveStar from "../../assets/star-inactive.png";
 
 export default function Rating({ stars }) {
-  const [rating, setRating] = useState(stars); // Initialisation de l'état avec la valeur des 'stars'
+  const [rating, setRating] = useState(stars); // Déclaration d'un état local 'rating' initialisé avec la valeur des 'stars' passées en prop
   const array = [1, 2, 3, 4, 5];
 
-  // Utilisation de useEffect pour mettre à jour l'état si les 'stars' changent
+  // Utilisation de useEffect pour mettre à jour l'état 'rating' lorsque la prop 'stars' change
   useEffect(() => {
     setRating(stars);
   }, [stars]);
@@ -18,10 +18,13 @@ export default function Rating({ stars }) {
         rating >= arrayElement ? (
           <img key={arrayElement.toString()} src={activeStar} alt="Full star" />
         ) : (
-          <img key={arrayElement.toString()} src={inactiveStar} alt="Empty star" />
+          <img
+            key={arrayElement.toString()}
+            src={inactiveStar}
+            alt="Empty star"
+          />
         )
       )}
     </div>
   );
 }
-

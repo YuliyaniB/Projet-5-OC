@@ -10,11 +10,12 @@
     padding: 35px 70px;
   }
   @media screen and (min-width: $breakpoint-desktop) {
-    padding: 40px 80px;
+    padding: 60px 80px;
   }
 
   img {
     width: 40%;
+    max-width: 150px;
     height: auto;
     @media screen and (min-width: $breakpoint-tablet) {
       width: 20%;
@@ -29,5 +30,8 @@
     text-align: center;
     margin-bottom: 0;
     font-size: 12px;
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 18px;
+    }
   }
 }

@@ -1,70 +1,78 @@
 @import "../../styles/variables.scss";
 
 .accomodation-page {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0 20px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 0 30px;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @media screen and (min-width: $breakpoint-desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .accomodation-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .accomodation-title {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        h1 {
+          color: $primary;
+          font-weight: 500;
+          margin: 0;
+          @media screen and (min-width: $breakpoint-tablet) {
+            font-size: 30px;
+          }
+          @media screen and (min-width: $breakpoint-desktop) {
+            font-size: 40px;
+          }
+        }
+
+        h3 {
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+    }
+
+    .host-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      @media screen and (min-width: $breakpoint-desktop) {
+        flex-direction: column-reverse;
+        gap: 10px;
+        align-items: end;
+        width: 40%;
+      }
+    }
+  }
+
+  .accomodation-collapse {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 0 20px;
-    margin-bottom: 20px;
     @media screen and (min-width: $breakpoint-desktop) {
-        padding: 0 30px;
-      }
-
-
-    .caroussel {
-
+      flex-direction: row;
+      gap: 50px;
     }
-
-    .main-section {
-        display: flex;
-        flex-direction: column;
-
-        .accomodation-info{
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            
-            .accomodation-title {
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-
-                h1 {
-                    color: #FF6060;
-                    font-weight: 500;
-                    margin: 0;
-                }
-
-                h3 {
-                    font-weight: 500;
-                    margin: 0;
-                }
-            }
-
-        }
-
-        .host-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-
-            .host-rate {
-
-            }
-
-            .host-profile {
-                
-            }
-
-        }
-    }
-
-    .accomodation-collapse {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        margin-bottom: 10px;
-    }
+  }
 }

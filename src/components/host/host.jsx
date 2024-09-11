@@ -1,10 +1,13 @@
 import React from "react";
 import "./host.scss";
 
-export default function Host({name, picture}) {
+export default function Host({ firstName, lastName, picture }) {
   return (
     <div className="host-container">
-      <h3 className="host-name">{name}</h3>
+      <div className="host-name">
+        <p className="host-first-name">{firstName}</p>
+        <p className="host-last-name">{lastName}</p>
+      </div>
       <img src={picture} alt="Host" className="host-picture" />
     </div>
   );

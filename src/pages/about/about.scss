@@ -1,31 +1,28 @@
 @import "../../styles/variables.scss";
 
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+  padding: 0 20px;
+  margin-top: 20px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    padding: 0 30px;
+    
+  }
+
+  #about-banner {
+    height: 2000000px;
+  }
+
+  .about-collapse {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 0 20px;
-    margin-top: 20px;
+    margin-bottom: 53px;
     @media screen and (min-width: $breakpoint-desktop) {
-        padding: 0 30px;
-        gap: 40px;
-        
-      }
-
-    #about-banner {
-        height: 2000000px;
+      padding: 0 50px;
+      gap: 40px;
     }
-
-    .about-collapse {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        margin-bottom: 50px;
-        @media screen and (min-width: $breakpoint-desktop) {
-            padding: 0 50px;
-            gap: 40px;
-            margin-bottom: 40px;
-          }
-        
-    }
+  }
 }

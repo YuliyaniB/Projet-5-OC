@@ -2,9 +2,9 @@
 
 .collapse {
   width: 100%;
-  background-color: $background;
   border-radius: 5px;
   justify-content: center;
+  
 
   .collapse-title {
     display: flex;
@@ -40,6 +40,27 @@
   }
 
   .collapse-content {
-    padding: 15px;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    background-color: $background;
+    
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 20px;
+    }
+
+    &.open {
+      display: flex;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
   }
 }
