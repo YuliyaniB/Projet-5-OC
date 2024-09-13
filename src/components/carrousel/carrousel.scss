@@ -63,4 +63,18 @@
       }
     }
   }
+
+  .carousel-counter {
+    display: none;
+    @media screen and (min-width: $breakpoint-desktop) {
+    display: block;
+    position: absolute;
+    bottom: 25px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    }
+    
+  }
 }

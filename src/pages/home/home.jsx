@@ -6,15 +6,20 @@ import { NavLink } from "react-router-dom";
 import Card from "../../components/cards/card";
 
 export default function Home() {
-  const [datas, setDatas] = useState([]); // État pour stocker les données
+  // État pour stocker les données
+  const [datas, setDatas] = useState([]); 
 
   // Utilisation de useEffect pour faire un fetch
   useEffect(() => {
-    fetch("/accomodation.json") // Mettre le bon chemin vers ton fichier JSON
-      .then((response) => response.json()) // Conversion en JSON
-      .then((data) => setDatas(data)) // Mise à jour de l'état avec les données récupérées
+    // Mettre le bon chemin vers ton fichier JSON
+    fetch("/accomodation.json") 
+    // Conversion en JSON
+      .then((response) => response.json())
+      // Mise à jour de l'état avec les données récupérées
+      .then((data) => setDatas(data)) 
       .catch((error) => console.error("Erreur lors du fetch:", error));
-  }, []); // Le tableau vide [] signifie que cet effet ne s'exécutera qu'une seule fois au montage du composant
+  }, []); // Le tableau vide [] signifie que cet effet ne 
+          // s'exécutera qu'une seule fois au montage du composant
 
   return (
     <main className="home-page">

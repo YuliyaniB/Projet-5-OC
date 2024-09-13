@@ -13,7 +13,8 @@ export default function App() {
   return (
     <Router>
       {" "}
-      {/* Le composant Router enveloppe l'application pour permettre la navigation entre les routes. */}
+      {/* Le composant Router enveloppe l'application pour 
+      permettre la navigation entre les routes. */}
       <Header />{" "}
       {/* Inclusion du Header qui sera visible sur toutes les pages. */}
       <Routes>
@@ -21,7 +22,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         {/* Route pour la page "À propos", affichée lorsque l'utilisateur visite "/about". */}
         <Route path="/about" element={<About />} />
-        {/* Route pour afficher les détails d'un logement spécifique, avec un paramètre dynamique "accomodationId". */}
+        {/* Route pour afficher les détails d'un logement spécifique, 
+        avec un paramètre dynamique "accomodationId". */}
         <Route
           path="/accomodation/:accomodationId"
           element={<Accomodation />}

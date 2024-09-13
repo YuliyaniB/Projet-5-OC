@@ -8,11 +8,15 @@ import Rating from "../../components/rating/rating";
 import Collapse from "../../components/collapse/collapse";
 
 export default function Accomodation() {
-  const { accomodationId } = useParams(); // Récupération de l'ID depuis les paramètres de l'URL
-  const [accomodation, setAccomodation] = useState(null); // État pour stocker les données de l'hébergement
-  const [error, setError] = useState(null); // État pour gérer les erreurs de fetch
+  // Récupération de l'ID depuis les paramètres de l'URL
+  const { accomodationId } = useParams();
+  // État pour stocker les données de l'hébergement
+  const [accomodation, setAccomodation] = useState(null);
+  // État pour gérer les erreurs de fetch
+  const [error, setError] = useState(null); 
 
-  // Utilisation de useEffect pour récupérer les données via fetch afin de préparer les futurs appels API
+  // Utilisation de useEffect pour récupérer les données 
+  //via fetch afin de préparer les futurs appels API
   useEffect(() => {
     fetch("/accomodation.json")
       .then((response) => {
@@ -22,8 +26,10 @@ export default function Accomodation() {
         return response.json();
       })
       .then((data) => {
-        const foundAccomodation = data.find((i) => i.id === accomodationId); // Trouve l'hébergement correspondant
-        setAccomodation(foundAccomodation); // Mise à jour de l'état avec les données trouvées
+        // Trouve l'hébergement correspondant
+        const foundAccomodation = data.find((i) => i.id === accomodationId);
+        // Mise à jour de l'état avec les données trouvées
+        setAccomodation(foundAccomodation); 
       })
       .catch((error) => {
         setError(error.message); // Gestion des erreurs
@@ -36,10 +42,12 @@ export default function Accomodation() {
   }
 
   if (!accomodation) {
-    return <div>Chargement...</div>; // Affiche un message de chargement tant que les données ne sont pas prêtes
+    // Affiche un message de chargement tant que les données ne sont pas prêtes
+    return <div>Chargement...</div>; 
   }
 
-  const [firstName, lastName] = accomodation.host.name.split(' '); // Diviser le nom complet en prénom et nom
+  // Diviser le nom complet en prénom et nom
+  const [firstName, lastName] = accomodation.host.name.split(' '); 
 
   return (
     <main className="accomodation-page">

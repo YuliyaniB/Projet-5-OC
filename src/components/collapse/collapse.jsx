@@ -20,7 +20,9 @@ export default function Collapse({ title, content }) {
           alt="arrow"
         />
       </div>
-      <div className={`collapse-content ${open ? "open" : ""}`}> {/* Détermine la classe CSS à appliquer en fonction de l'état ouvert ou fermé du collapse*/}
+      {/* Détermine la classe CSS à appliquer en fonction 
+      de l'état ouvert ou fermé du collapse*/}
+      <div className={`collapse-content ${open ? "open" : ""}`}> 
         {Array.isArray(content) ? ( // Si "content" est un tableau
           <ul>
             {content.map((item, index) => (

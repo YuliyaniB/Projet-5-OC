@@ -15,6 +15,8 @@ export default function Carrousel({ images }) {
   // Fonction pour revenir à l'image précédente
   const prevImage = () => {
     setCurrentIndex((prevIndex) =>
+      // Si index de l'image = 0 on revient à la derniere image
+      // sinon on va à l'image précedente
       prevIndex === 0 ? images.length - 1 : prevIndex - 1
     );
   };
@@ -36,6 +38,9 @@ export default function Carrousel({ images }) {
           <button className="carousel-button next" onClick={nextImage}>
             <img src={rightArrow} alt="Suivant" className="arrow-icon" />
           </button>
+          <div className="carousel-counter">
+            {currentIndex + 1}/{images.length}
+          </div>
         </div>
       )}
     </section>
